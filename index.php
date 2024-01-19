@@ -16,5 +16,7 @@
         }
         ?>
     </ul>
+
+    <p><a href="admin.php">Admin Panel</a></p>
 </body>
 </html>
