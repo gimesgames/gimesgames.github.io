@@ -1,8 +1,13 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $data = json_encode($_POST);
-    $filename = "./database/post_" . time() . ".json";
-    file_put_contents($filename, $data);
+    $post = [
+        'title' => $_POST['title'],
+        'content' => $_POST['content'],
+        'timestamp' => time()
+    ];
+
+    $filename = "./database/post_" . $post['timestamp'] . ".json";
+    file_put_contents($filename, json_encode($post));
 }
 ?>
 <!DOCTYPE html>
