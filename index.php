@@ -7,16 +7,14 @@
 </head>
 <body>
     <h2>News</h2>
-    <ul id="newsList">
+    <ul>
         <?php
         $postFiles = glob('./database/post_*.json');
         foreach ($postFiles as $file) {
             $post = json_decode(file_get_contents($file), true);
-            echo "<li><a href='view.php?timestamp={$post['timestamp']}'>{$post['title']}</a></li>";
+            echo "<li><a href='post.php?timestamp={$post['timestamp']}'>{$post['title']}</a></li>";
         }
         ?>
     </ul>
-
-    <p><a href="admin.php">Admin Panel</a></p>
 </body>
 </html>
