@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Workbench', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.avviso-container {
+    max-width: 600px;
+}
+
+.avviso-message {
+    font-size: 24px;
+    text-transform: uppercase;
+}
