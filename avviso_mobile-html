@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avviso Dispositivo Mobile</title>
+    <!-- Link al foglio di stile del font Workbench -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Workbench:wght@400;700&display=swap">
+    <!-- Link al file CSS esterno per lo stile della pagina di avviso -->
+    <link rel="stylesheet" href="avviso_mobile.css">
+</head>
+<body>
+    <div class="avviso-container">
+    <img src="https://i.imgur.com/uGbddkp.jpg">
+      <p class="avviso-message">DISTRUGGI IL TUO TELEFONO</p>
+      <p class="avviso-message">non puoi accedere a questo sito da dispositivo mobile!</p>
+          
+    </div>
+</body>
+</html>
