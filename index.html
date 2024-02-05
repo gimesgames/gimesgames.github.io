@@ -13,7 +13,7 @@
     <!-- Aggiunta dello script di reindirizzamento -->
     <script>
         // Verifica se l'utente sta accedendo da un dispositivo mobile
-        if (window.innerWidth <= 800 && window.innerHeight <= 600) {
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
             // Reindirizza alla pagina di avviso
             window.location.href = "avviso_mobile.html";
         }
