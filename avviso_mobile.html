@@ -12,12 +12,11 @@
 <body>
     <div class="avviso-container">
         <p class="avviso-message" id="avviso-message"></p>
-        <p class="avviso-submessage" id="avviso-submessage"></p>
+        <p class="avviso-submessage">non puoi accedere a questo spazio attraverso un dispositivo di controllo <span class="red">mobile</span></p>
     </div>
     <!-- Script per simulare l'effetto di digitazione -->
     <script>
         var message = "DISTRUGGI IL TUO TELEFONO";
-        var submessage = "non puoi accedere a questo spazio attraverso un dispositivo di controllo mobile";
         var index = 0;
         var speed = 50; // Velocità di digitazione in millisecondi
 
@@ -26,17 +25,6 @@
                 document.getElementById("avviso-message").innerHTML += message.charAt(index);
                 index++;
                 setTimeout(typeWriter, speed);
-            } else if (index === message.length) {
-                index++; // Avvia la scrittura del submessage
-                typeSubWriter();
-            }
-        }
-
-        function typeSubWriter() {
-            if (index - message.length - 1 < submessage.length) {
-                document.getElementById("avviso-submessage").innerHTML += submessage.charAt(index - message.length - 1);
-                index++;
-                setTimeout(typeSubWriter, speed);
             }
         }
 
