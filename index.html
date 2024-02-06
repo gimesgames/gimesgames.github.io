@@ -8,20 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Workbench:wght@400;700&display=swap">
     <!-- Link al file CSS esterno -->
     <link rel="stylesheet" href="style.css">
-    <!-- Aggiunta della GIF di apertura -->
-    <style>
-        /* Stile per la GIF di apertura */
-        .opening-gif {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://thoughtcatalog.com/wp-content/uploads/2014/08/computer31.gif') center center no-repeat;
-            background-color: black;
-            z-index: 9999; /* Assicura che la GIF sia sopra tutti gli altri elementi */
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -39,29 +25,12 @@
             <div class="grid-item">Aggiornamenti</div>
             <div class="grid-item">Autoproduzioni</div>
         </div>
-
-        <!-- Embed iframe -->
-        <div class="iframe-container">
-            <iframe src="https://equinoctial-crank.000webhostapp.com/" width="100%" height="400px" frameborder="0"></iframe>
-        </div>
+        <!-- Aggiunta dell'iframe embed -->
+        <iframe src="https://equinoctial-crank.000webhostapp.com/" width="100%" height="400px" frameborder="0"></iframe>
     </section>
 
     <footer>
         <p>Collettivo Punx Chaos. Questo sito è uno SPAZIO DIGITALE COMPLETAMENTE AUTOGESTITO.</p>
     </footer>
-
-    <!-- Script per rimuovere la GIF dopo un certo periodo di tempo -->
-    <script>
-        window.onload = function() {
-            var gifContainer = document.createElement('div');
-            gifContainer.classList.add('opening-gif');
-            document.body.appendChild(gifContainer);
-
-            // Rimuove la GIF dopo un certo periodo di tempo (5 secondi)
-            setTimeout(function() {
-                document.body.removeChild(gifContainer);
-            }, 5000); // 5000 millisecondi = 5 secondi
-        };
-    </script>
 </body>
 </html>
