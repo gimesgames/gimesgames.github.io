@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> PROPAGANDAPUNX </title>
-    <!-- Link all'icona del sito -->
-    <link rel="icon" href="https://i.imgur.com/uGbddkp.jpg" type="image/png">
+    <title>PROPAGANDAPUNX</title>
     <!-- Link al foglio di stile del font Workbench -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Workbench:wght@400;700&display=swap">
     <!-- Link al file CSS esterno -->
     <link rel="stylesheet" href="style.css">
-    <!-- Aggiunta dello script di reindirizzamento -->
+    <!-- Aggiunta dello script di avvio dell'animazione -->
     <script>
-        // Verifica se l'utente sta accedendo da un dispositivo mobile
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            // Reindirizza alla pagina di avviso
-            window.location.href = "avviso_mobile.html";
-        }
+        // Funzione per avviare l'animazione all'apertura del sito
+        window.onload = function() {
+            var container = document.createElement('div');
+            container.id = 'gif-container';
+            container.innerHTML = '<div class="tenor-gif-embed" data-postid="21929152" data-share-method="host" data-aspect-ratio="1.3278" data-width="100%"><a href="https://tenor.com/view/hacker-gif-21929152">Hacker GIF</a>from <a href="https://tenor.com/search/hacker-gifs">Hacker GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>';
+            document.body.appendChild(container);
+
+            // Rimuove la GIF dopo 5 secondi
+            setTimeout(function() {
+                container.remove();
+            }, 5000);
+        };
     </script>
 </head>
 <body>
