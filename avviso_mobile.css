@@ -21,7 +21,7 @@ body {
     border-right: 2px solid white; /* Simula il cursore lampeggiante */
     white-space: nowrap; /* Evita il wrap del testo */
     overflow: hidden; /* Nasconde il testo in eccesso */
-    animation: typeWriter 2s steps(40) infinite;
+    animation: typeWriter 2s steps(20) forwards; /* Animazione di scrittura */
 }
 
 /* Animazione di digitazione */
