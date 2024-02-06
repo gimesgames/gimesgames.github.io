@@ -1,33 +1,30 @@
-/* Aggiungi il CSS per la visualizzazione a schermo intero della GIF */
-.fullscreen-gif {
-    position: fixed;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Colore di sfondo nero */
+    overflow: hidden; /* Nasconde eventuali barre di scorrimento */
+}
+
+/* Stile per l'animazione di apertura */
+.opening-animation {
+    position: fixed; /* Posizione fissa rispetto alla finestra del browser */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    z-index: 9999; /* Assicura che la GIF sia sopra gli altri elementi */
+    background-color: black; /* Colore di sfondo nero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Assicura che sia sopra tutti gli altri elementi */
 }
 
-.fullscreen-gif .tenor-gif-embed {
-    width: 100%;
-    height: 100%;
+.opening-animation img {
+    max-width: 100%; /* Massima larghezza consentita */
+    max-height: 100%; /* Massima altezza consentita */
 }
 
-/* Aggiungi il resto del tuo CSS qui */
-body {
-    font-family: 'Workbench', sans-serif; /* Utilizzo del font "Workbench" per tutto il corpo della pagina */
-    margin: 0;
-    padding: 0;
-    background-image: url('https://i.imgur.com/uGbddkp.jpg'); /* Sostituisci con il percorso dell'immagine di sfondo desiderata */
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: repeat; /* Ripeti lo sfondo a riquadri */
-    color: white; /* Colore del testo bianco */
-    position: relative;
-    overflow: hidden; /* Nasconde eventuali scroll bars */
-}
-
+/* Stile per l'intestazione */
 header {
     text-align: center;
     padding: 5px; /* Ridotto il padding per rendere la barra del titolo più sottile */
@@ -37,20 +34,7 @@ header {
     text-transform: uppercase; /* Testo in maiuscolo */
 }
 
-section {
-    margin: 20px 0;
-    color: white; /* Colore del testo bianco */
-    text-transform: uppercase; /* Testo in maiuscolo */
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8); /* Nero con opacità */
-    color: white; /* Colore del testo bianco */
-    text-transform: uppercase; /* Testo in maiuscolo */
-}
-
+/* Stile per il modulo superiore */
 .top-module {
     background-color: black; /* Nero */
     padding: 20px;
@@ -63,6 +47,7 @@ footer {
     text-transform: uppercase; /* Testo in maiuscolo */
 }
 
+/* Stile per il modulo centrale */
 .central-module {
     background-color: #111; /* Nero più chiaro */
     padding: 40px;
@@ -75,58 +60,11 @@ footer {
     text-transform: uppercase; /* Testo in maiuscolo */
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Quattro colonne per la griglia, una per ogni rettangolo */
-    grid-gap: 10px; /* Spazio tra le celle della griglia */
-    margin-top: 0; /* Nessun margine superiore */
-}
-
-.grid-item {
-    background-color: #222; /* Nero più chiaro */
-    padding: 30px; /* Aumentato il padding per ingrandire i moduli */
+/* Stile per il footer */
+footer {
     text-align: center;
-    border-radius: 4px; /* Angoli leggermente stondati */
-    margin-top: 0; /* Nessun margine superiore */
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1); /* Ombra bianca più sottile */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Nero con opacità */
     color: white; /* Colore del testo bianco */
     text-transform: uppercase; /* Testo in maiuscolo */
-}
-
-/* Animazione di apertura */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-body {
-    animation: fadeIn 2s ease-in-out; /* Animazione di apertura di 2 secondi */
-}
-
-/* Effetto VHS animato */
-.vhs-filter {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://i.pinimg.com/originals/b6/fe/0c/b6fe0c5fd3c211e729aabeca0597fa0e.gif') repeat; /* GIF VHS */
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0.2; /* Opacità della GIF VHS */
-    mix-blend-mode: screen; /* Modalità di miscelazione per effetto di sovrapposizione */
-    animation: vhsAnimation 5s infinite alternate-reverse; /* Animazione VHS */
-}
-
-@keyframes vhsAnimation {
-    from {
-        transform: translate(-5px, -5px);
-    }
-    to {
-        transform: translate(5px, 5px);
-    }
 }
