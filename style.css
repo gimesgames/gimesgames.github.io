@@ -1,89 +1,141 @@
+/* style.css */
+
 body {
+    font-family: 'Workbench', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-image: url('https://imgur.com/uGbddkp');
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
-    font-family: 'Workbench', sans-serif;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden; /* Rimuove le barre di scorrimento */
-}
-
-#opening-gif {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999; /* Assicura che la GIF sia in primo piano */
-}
-
-.fullscreen-gif {
-    width: 100vw; /* Larghezza della finestra visualizzata */
-    height: 100vh; /* Altezza della finestra visualizzata */
+    position: relative;
+    overflow: hidden;
 }
 
 header {
     text-align: center;
-    padding: 5px; /* Ridotto il padding per rendere la barra del titolo più sottile */
-    background-color: transparent; /* Barra del titolo trasparente */
-    color: white; /* Colore del testo bianco */
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Ombra bianca nella parte inferiore */
-    text-transform: uppercase; /* Testo in maiuscolo */
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
 }
 
-.top-module {
-    max-width: 100%;
-    height: auto;
-}
-
-.top-module img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px; /* Angoli leggermente stondati */
-}
-
-.central-module {
-    background-color: #111; /* Nero più chiaro */
-    padding: 40px;
-    margin: 5px auto 20px; /* Margine ridotto sopra, aumentato sotto */
-    max-width: 800px;
-    height: auto;
-    position: relative;
-    border-radius: 4px; /* Angoli leggermente stondati */
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.1); /* Ombra bianca più sottile */
-    text-transform: uppercase; /* Testo in maiuscolo */
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Quattro colonne per la griglia, una per ogni rettangolo */
-    grid-gap: 10px; /* Spazio tra le celle della griglia */
-    margin-top: 0; /* Nessun margine superiore */
-}
-
-.grid-item {
-    background-color: #222; /* Nero più chiaro */
-    padding: 30px; /* Aumentato il padding per ingrandire i moduli */
-    text-align: center;
-    border-radius: 4px; /* Angoli leggermente stondati */
-    margin-top: 0; /* Nessun margine superiore */
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1); /* Ombra bianca più sottile */
-    color: white; /* Colore del testo bianco */
-    text-transform: uppercase; /* Testo in maiuscolo */
+section {
+    margin: 20px 0;
+    color: white;
+    text-transform: uppercase;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8); /* Nero con opacità */
-    color: white; /* Colore del testo bianco */
-    text-transform: uppercase; /* Testo in maiuscolo */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-transform: uppercase;
 }
 
-footer p {
-    margin: 0; /* Rimuove il margine */
+.top-module {
+    background-color: black;
+    padding: 20px;
+    margin: 0 auto 0;
+    max-width: 800px;
+    position: relative;
+    border-radius: 4px;
+    height: 40px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+}
+
+.central-module {
+    background-color: #111;
+    padding: 40px;
+    margin: 5px auto 20px;
+    max-width: 800px;
+    height: 600px;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 0;
+}
+
+.grid-item {
+    background-color: #222;
+    padding: 30px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 0;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1);
+    color: white;
+    text-transform: uppercase;
+}
+
+.vhs-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.pinimg.com/originals/b6/fe/0c/b6fe0c5fd3c211e729aabeca0597fa0e.gif') repeat;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.2;
+    mix-blend-mode: screen;
+    animation: vhsAnimation 5s infinite alternate-reverse;
+}
+
+@keyframes vhsAnimation {
+    from {
+        transform: translate(-5px, -5px);
+    }
+    to {
+        transform: translate(5px, 5px);
+    }
+}
+
+/* Animazione di apertura */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animazione di digitazione */
+@keyframes typeWriter {
+    from {
+        width: 0;
+    }
+}
+
+.avviso-container {
+    max-width: 600px;
+}
+
+.avviso-message {
+    font-size: 24px;
+    text-transform: uppercase;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typeWriter 2s steps(20) forwards;
+    margin-bottom: 20px;
+}
+
+.avviso-submessage {
+    font-size: 18px;
+    margin: 0;
 }
