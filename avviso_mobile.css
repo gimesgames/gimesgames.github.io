@@ -15,15 +15,16 @@ body {
     max-width: 600px;
     width: 100%; /* Larghezza al 100% */
     overflow: hidden; /* Nasconde il testo in eccesso */
+    text-align: left; /* Allineamento del testo a sinistra */
 }
 
 .avviso-message, .avviso-submessage {
     font-size: 24px;
     text-transform: uppercase;
-    border-right: 2px solid white; /* Simula il cursore lampeggiante */
     white-space: nowrap; /* Evita il wrap del testo */
     overflow: hidden; /* Nasconde il testo in eccesso */
     width: 100%; /* Larghezza al 100% */
+    border-right: none; /* Rimuovi il bordo destro */
 }
 
 .avviso-message {
