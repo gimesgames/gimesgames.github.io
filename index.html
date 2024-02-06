@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROPAGANDAPUNX</title>
+    <!-- Link all'icona del sito -->
+    <link rel="icon" href="https://i.imgur.com/uGbddkp.jpg" type="image/png">
+    <!-- Link al foglio di stile del font Workbench -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Workbench:wght@400;700&display=swap">
     <!-- Link al file CSS esterno -->
     <link rel="stylesheet" href="style.css">
+    <!-- Aggiunta dello script per far scomparire la GIF all'apertura -->
+    <script>
+        setTimeout(function(){
+            document.getElementById("opening-gif").style.display = "none";
+        }, 3000); // La GIF scomparirà dopo 3 secondi (3000 millisecondi)
+    </script>
 </head>
 <body>
-    <div class="opening-animation">
-        <img src="https://thoughtcatalog.com/wp-content/uploads/2014/08/computer31.gif" alt="Apertura animata" id="opening-gif">
+    <!-- GIF per l'apertura del sito -->
+    <div id="opening-gif">
+        <img src="https://thoughtcatalog.com/wp-content/uploads/2014/08/computer31.gif" alt="Apertura del sito" class="fullscreen-gif">
     </div>
 
+    <!-- Il resto del contenuto del sito rimane invariato -->
     <header>
         <!-- Nessun titolo o barra del titolo -->
     </header>
@@ -32,19 +44,5 @@
     <footer>
         <p>Collettivo Punx Chaos. Questo sito è uno SPAZIO DIGITALE COMPLETAMENTE AUTOGESTITO.</p>
     </footer>
-
-    <!-- Script per far scomparire la GIF all'apertura -->
-    <script>
-        // Rileva la fine del caricamento della pagina
-        window.addEventListener('load', function() {
-            // Ottieni l'elemento della GIF
-            var openingGif = document.getElementById('opening-gif');
-            // Imposta un timeout per far scomparire la GIF dopo 5 secondi
-            setTimeout(function() {
-                // Nascondi la GIF
-                openingGif.style.display = 'none';
-            }, 5000); // 5000 millisecondi = 5 secondi
-        });
-    </script>
 </body>
 </html>
