@@ -22,20 +22,10 @@ body {
     white-space: nowrap; /* Evita il wrap del testo */
     overflow: hidden; /* Nasconde il testo in eccesso */
     animation: typeWriter 2s steps(20) forwards; /* Animazione di scrittura */
+    margin-bottom: 20px; /* Aggiunge spazio tra le scritte */
 }
 
 .avviso-submessage {
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-.red {
-    color: red; /* Colore rosso per il testo */
-}
-
-/* Animazione di digitazione */
-@keyframes typeWriter {
-    from {
-        width: 0;
-    }
+    font-size: 18px; /* Dimensione del font ridotta */
+    margin: 0; /* Rimuove il margine */
 }
