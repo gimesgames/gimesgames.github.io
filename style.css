@@ -12,6 +12,7 @@ body {
     background-repeat: repeat;
     color: white;
     overflow: hidden;
+    position: relative; /* Aggiunto posizionamento relativo */
 }
 
 header {
@@ -23,15 +24,20 @@ header {
     text-transform: uppercase;
 }
 
-.top-header {
+.top-module {
     text-align: center;
     margin-bottom: 20px;
+    position: relative; /* Aggiunto posizionamento relativo */
 }
 
 .module-caption {
     font-size: 18px;
     text-transform: uppercase;
     margin-top: 10px;
+    position: absolute; /* Aggiunto posizionamento assoluto */
+    left: 50%; /* Posiziona al centro */
+    transform: translateX(-50%); /* Correzione per centrare orizzontalmente */
+    bottom: 0; /* Posiziona in fondo */
 }
 
 .central-module {
