@@ -4,26 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROPAGANDAPUNX</title>
-    <!-- Link all'icona del sito -->
-    <link rel="icon" href="https://i.imgur.com/uGbddkp.jpg" type="image/png">
-    <!-- Link al foglio di stile del font Workbench -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Workbench:wght@400;700&display=swap">
     <!-- Link al file CSS esterno -->
     <link rel="stylesheet" href="style.css">
-    <!-- Aggiunta dello script per far scomparire la GIF all'apertura -->
-    <script>
-        setTimeout(function(){
-            document.getElementById("opening-gif").style.display = "none";
-        }, 3000); // La GIF scomparirà dopo 3 secondi (3000 millisecondi)
-    </script>
 </head>
 <body>
-    <!-- GIF per l'apertura del sito -->
-    <div id="opening-gif">
-        <img src="https://thoughtcatalog.com/wp-content/uploads/2014/08/computer31.gif" alt="Apertura del sito" class="fullscreen-gif">
+    <div class="opening-animation">
+        <img src="https://thoughtcatalog.com/wp-content/uploads/2014/08/computer31.gif" alt="Apertura del sito">
     </div>
 
-    <!-- Il resto del contenuto del sito rimane invariato -->
     <header>
         <!-- Nessun titolo o barra del titolo -->
     </header>
@@ -44,5 +32,14 @@
     <footer>
         <p>Collettivo Punx Chaos. Questo sito è uno SPAZIO DIGITALE COMPLETAMENTE AUTOGESTITO.</p>
     </footer>
+
+    <!-- Script per far scomparire l'animazione dopo la visualizzazione -->
+    <script>
+        // Nasconde l'animazione dopo il caricamento della pagina
+        window.onload = function() {
+            var openingAnimation = document.querySelector('.opening-animation');
+            openingAnimation.style.display = 'none';
+        };
+    </script>
 </body>
 </html>
