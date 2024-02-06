@@ -15,17 +15,32 @@ body {
     max-width: 600px;
 }
 
-.avviso-message {
+.avviso-message, .avviso-submessage {
     font-size: 24px;
     text-transform: uppercase;
     border-right: 2px solid white; /* Simula il cursore lampeggiante */
     white-space: nowrap; /* Evita il wrap del testo */
     overflow: hidden; /* Nasconde il testo in eccesso */
-    animation: typeWriter 2s steps(20) forwards; /* Animazione di scrittura */
 }
 
-/* Animazione di digitazione */
+.avviso-message {
+    animation: typeWriter 2s steps(20) forwards; /* Animazione di scrittura per il messaggio principale */
+}
+
+.avviso-submessage {
+    animation: typeSubWriter 2s steps(20) forwards; /* Animazione di scrittura per il messaggio secondario */
+    color: red; /* Colora di rosso la parte "dispositivo di controllo mobile" */
+}
+
+/* Animazione di digitazione per il messaggio principale */
 @keyframes typeWriter {
+    from {
+        width: 0;
+    }
+}
+
+/* Animazione di digitazione per il messaggio secondario */
+@keyframes typeSubWriter {
     from {
         width: 0;
     }
