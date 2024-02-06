@@ -1,151 +1,4 @@
-body {
-    font-family: 'Workbench', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://i.imgur.com/uGbddkp.jpg');
-    background-size: auto;
-    background-attachment: fixed;
-    background-repeat: repeat;
-    color: white;
-    position: relative;
-    overflow: auto;
-}
-
-header {
-    text-align: center;
-    padding: 5px;
-    background-color: transparent;
-    color: white;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    text-transform: uppercase;
-}
-
-section {
-    margin: 20px 0;
-    color: white;
-    text-transform: uppercase;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-transform: uppercase;
-}
-
-.top-module {
-    background-color: black;
-    padding: 10px;
-    margin: 0 auto 0;
-    max-width: 800px;
-    position: relative;
-    border-radius: 4px;
-    height: 80px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1);
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.top-module img {
-    max-width: 200px;
-    max-height: 80px;
-    border-radius: 4px;
-}
-
-.central-module {
-    background-color: #111;
-    padding: 40px;
-    margin: 5px auto 20px;
-    max-width: 800px;
-    height: 600px;
-    position: relative;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.1);
-    text-transform: uppercase;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    margin-top: 0;
-}
-
-.grid-item {
-    background-color: #222;
-    padding: 30px;
-    text-align: center;
-    border-radius: 4px;
-    margin-top: 0;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1);
-    color: white;
-    text-transform: uppercase;
-    transition: background-color 0.2s, color 0.2s;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.grid-item:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://i.pinimg.com/originals/b6/fe/0c/b6fe0c5fd3c211e729aabeca0597fa0e.gif') repeat;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0;
-    mix-blend-mode: screen;
-    animation: vhsAnimation 0.5s infinite alternate-reverse;
-}
-
-.grid-item:hover {
-    background-color: #42C920;
-    color: black;
-    animation: flicker 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-body {
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes flicker {
-    0%, 100% {
-        background-color: #42C920;
-        color: black;
-    }
-    50% {
-        background-color: #111;
-        color: white;
-    }
-}
-
-@keyframes vhsAnimation {
-    from {
-        transform: translate(-5px, -5px);
-    }
-    to {
-        transform: translate(5px, 5px);
-    }
-}
-
-/* Aggiunta del link al font Workbench */
-@import url('https://fonts.googleapis.com/css2?family=Workbench:wght@400;700&display=swap');
-
+/* Aggiungi il CSS per la visualizzazione a schermo intero della GIF */
 .fullscreen-gif {
     position: fixed;
     top: 0;
@@ -161,3 +14,119 @@ body {
     height: 100%;
 }
 
+/* Aggiungi il resto del tuo CSS qui */
+body {
+    font-family: 'Workbench', sans-serif; /* Utilizzo del font "Workbench" per tutto il corpo della pagina */
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.imgur.com/uGbddkp.jpg'); /* Sostituisci con il percorso dell'immagine di sfondo desiderata */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat; /* Ripeti lo sfondo a riquadri */
+    color: white; /* Colore del testo bianco */
+    position: relative;
+    overflow: hidden; /* Nasconde eventuali scroll bars */
+}
+
+header {
+    text-align: center;
+    padding: 5px; /* Ridotto il padding per rendere la barra del titolo più sottile */
+    background-color: transparent; /* Barra del titolo trasparente */
+    color: white; /* Colore del testo bianco */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Ombra bianca nella parte inferiore */
+    text-transform: uppercase; /* Testo in maiuscolo */
+}
+
+section {
+    margin: 20px 0;
+    color: white; /* Colore del testo bianco */
+    text-transform: uppercase; /* Testo in maiuscolo */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Nero con opacità */
+    color: white; /* Colore del testo bianco */
+    text-transform: uppercase; /* Testo in maiuscolo */
+}
+
+.top-module {
+    background-color: black; /* Nero */
+    padding: 20px;
+    margin: 0 auto 0; /* Posizionato al centro, senza margine superiore */
+    max-width: 800px;
+    position: relative;
+    border-radius: 4px; /* Angoli leggermente stondati */
+    height: 40px; /* Altezza ridotta a 40 pixel */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1); /* Ombra bianca più sottile */
+    text-transform: uppercase; /* Testo in maiuscolo */
+}
+
+.central-module {
+    background-color: #111; /* Nero più chiaro */
+    padding: 40px;
+    margin: 5px auto 20px; /* Margine ridotto sopra, aumentato sotto */
+    max-width: 800px;
+    height: 600px; /* Altezza originale */
+    position: relative;
+    border-radius: 4px; /* Angoli leggermente stondati */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.1); /* Ombra bianca più sottile */
+    text-transform: uppercase; /* Testo in maiuscolo */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Quattro colonne per la griglia, una per ogni rettangolo */
+    grid-gap: 10px; /* Spazio tra le celle della griglia */
+    margin-top: 0; /* Nessun margine superiore */
+}
+
+.grid-item {
+    background-color: #222; /* Nero più chiaro */
+    padding: 30px; /* Aumentato il padding per ingrandire i moduli */
+    text-align: center;
+    border-radius: 4px; /* Angoli leggermente stondati */
+    margin-top: 0; /* Nessun margine superiore */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1); /* Ombra bianca più sottile */
+    color: white; /* Colore del testo bianco */
+    text-transform: uppercase; /* Testo in maiuscolo */
+}
+
+/* Animazione di apertura */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 2s ease-in-out; /* Animazione di apertura di 2 secondi */
+}
+
+/* Effetto VHS animato */
+.vhs-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.pinimg.com/originals/b6/fe/0c/b6fe0c5fd3c211e729aabeca0597fa0e.gif') repeat; /* GIF VHS */
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.2; /* Opacità della GIF VHS */
+    mix-blend-mode: screen; /* Modalità di miscelazione per effetto di sovrapposizione */
+    animation: vhsAnimation 5s infinite alternate-reverse; /* Animazione VHS */
+}
+
+@keyframes vhsAnimation {
+    from {
+        transform: translate(-5px, -5px);
+    }
+    to {
+        transform: translate(5px, 5px);
+    }
+}
