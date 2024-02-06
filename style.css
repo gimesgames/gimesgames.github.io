@@ -1,14 +1,15 @@
+/* style.css */
+
 body {
     font-family: 'Workbench', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://i.imgur.com/uGbddkp.jpg');
-    background-size: auto;
+    background-image: url('https://imgur.com/uGbddkp');
+    background-size: cover;
     background-attachment: fixed;
-    background-repeat: repeat;
     color: white;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
 }
 
 header {
@@ -36,23 +37,14 @@ footer {
 
 .top-module {
     background-color: black;
-    padding: 10px;
+    padding: 20px;
     margin: 0 auto 0;
     max-width: 800px;
     position: relative;
     border-radius: 4px;
-    height: 80px;
+    height: 40px;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1);
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.top-module img {
-    max-width: 200px;
-    max-height: 80px;
-    border-radius: 4px;
 }
 
 .central-module {
@@ -83,14 +75,9 @@ footer {
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 6px rgba(255, 255, 255, 0.1);
     color: white;
     text-transform: uppercase;
-    transition: background-color 0.2s, color 0.2s;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
 }
 
-.grid-item:before {
-    content: '';
+.vhs-filter {
     position: absolute;
     top: 0;
     left: 0;
@@ -98,18 +85,22 @@ footer {
     height: 100%;
     background: url('https://i.pinimg.com/originals/b6/fe/0c/b6fe0c5fd3c211e729aabeca0597fa0e.gif') repeat;
     pointer-events: none;
-    z-index: 1;
-    opacity: 0;
+    z-index: -1;
+    opacity: 0.2;
     mix-blend-mode: screen;
-    animation: vhsAnimation 0.5s infinite alternate-reverse;
+    animation: vhsAnimation 5s infinite alternate-reverse;
 }
 
-.grid-item:hover {
-    background-color: #42C920;
-    color: black;
-    animation: flicker 0.5s ease-in-out forwards;
+@keyframes vhsAnimation {
+    from {
+        transform: translate(-5px, -5px);
+    }
+    to {
+        transform: translate(5px, 5px);
+    }
 }
 
+/* Animazione di apertura */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -123,25 +114,28 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-@keyframes flicker {
-    0%, 100% {
-        background-color: #42C920;
-        color: black;
-    }
-    50% {
-        background-color: #111;
-        color: white;
-    }
-}
-
-@keyframes vhsAnimation {
+/* Animazione di digitazione */
+@keyframes typeWriter {
     from {
-        transform: translate(-5px, -5px);
-    }
-    to {
-        transform: translate(5px, 5px);
+        width: 0;
     }
 }
 
-/* Aggiunta del link al font Workbench */
-@import url('https://fonts.googleapis.com/css2?family=Workbench:wght@400;700&display=swap');
+.avviso-container {
+    max-width: 600px;
+}
+
+.avviso-message {
+    font-size: 24px;
+    text-transform: uppercase;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typeWriter 2s steps(20) forwards;
+    margin-bottom: 20px;
+}
+
+.avviso-submessage {
+    font-size: 18px;
+    margin: 0;
+}
