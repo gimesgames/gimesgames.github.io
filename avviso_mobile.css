@@ -1,31 +1,32 @@
 body {
+    font-family: 'Workbench', sans-serif; /* Utilizzo del font "Workbench" per tutto il corpo della pagina */
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: white;
-    font-family: 'Workbench', sans-serif;
+    background-image: url('https://i.imgur.com/uGbddkp.jpg'); /* Sostituisci con il percorso dell'immagine di sfondo desiderata */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat; /* Ripeti lo sfondo a riquadri */
+    color: white; /* Colore del testo bianco */
+    position: relative;
+    overflow: hidden; /* Nasconde eventuali scroll bars */
+}
+
+header {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding: 5px; /* Ridotto il padding per rendere la barra del titolo più sottile */
+    background-color: transparent; /* Barra del titolo trasparente */
+    color: white; /* Colore del testo bianco */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Ombra bianca nella parte inferiore */
+    text-transform: uppercase; /* Testo in maiuscolo */
 }
 
-.avviso-container {
-    max-width: 600px;
+.top-module {
+    text-align: center; /* Centra logicamente il testo */
+    margin-bottom: 20px; /* Aggiunge spazio tra l'immagine e il testo */
 }
 
-.avviso-message {
-    font-size: 24px;
-    text-transform: uppercase;
-    border-right: 2px solid white; /* Simula il cursore lampeggiante */
-    white-space: nowrap; /* Evita il wrap del testo */
-    overflow: hidden; /* Nasconde il testo in eccesso */
-    animation: typeWriter 2s steps(20) forwards; /* Animazione di scrittura */
-    margin-bottom: 20px; /* Aggiunge spazio tra le scritte */
-}
-
-.avviso-submessage {
-    font-size: 18px; /* Dimensione del font ridotta */
-    margin: 0; /* Rimuove il margine */
+.module-caption {
+    font-size: 18px; /* Dimensione del font */
+    text-transform: uppercase; /* Testo in maiuscolo */
+    margin-top: 10px; /* Aggiunge spazio sopra il testo */
 }
