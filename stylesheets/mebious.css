@@ -414,18 +414,6 @@ h1 {
 
 /* Aggiunta delle regole per centrare e ridimensionare l'immagine del titolo */
 
-img[alt*="000webhost"],
-img[alt*="000webhost"][style],
-img[src*="000webhost"],
-img[src*="000webhost"][style],
-body > div:nth-last-of-type(1)[style]{
-	opacity: 0 !important;
-	pointer-events:none !important;
-	width: 0px !important;
-	height: 0px !important;
-	visibility:hidden !important;
-	display:none !important;
-}
 #title {
     max-width: 50%; /* Ridimensiona l'immagine al massimo del 50% della larghezza del contenitore */
     display: block; /* Permette di centrare l'immagine */
