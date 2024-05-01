@@ -419,12 +419,12 @@ img[alt*="000webhost"][style],
 img[src*="000webhost"],
 img[src*="000webhost"][style],
 body > div:nth-last-of-type(1)[style]{
-	opacity: 0 !important;
-	pointer-events:none !important;
-	width: 0px !important;
-	height: 0px !important;
-	visibility:hidden !important;
-	display:none !important;
+    opacity: 0 !important;
+    pointer-events:none !important;
+    width: 0px !important;
+    height: 0px !important;
+    visibility:hidden !important;
+    display:none !important;
 }
 #title {
     max-width: 50%; /* Ridimensiona l'immagine al massimo del 50% della larghezza del contenitore */
@@ -434,3 +434,23 @@ body > div:nth-last-of-type(1)[style]{
     margin-bottom: 2px; /* Aggiunge uno spazio di 20px sotto l'immagine */
 }
 
+/* Aggiunta delle regole per immagini e bottoni */
+img.gallery-image {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a.download-button {
+    display: block;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: black;
+    color: red;
+    border: 5px inset #00FF00;
+    padding: 10px;
+    text-decoration: none;
+}
