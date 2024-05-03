@@ -62,12 +62,13 @@
 body {
     position: relative;
     background-color: black;
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
     padding-top: 2%;
     padding-bottom: 2%;
     /* CUSTOM CURSOR CODE */
     cursor: url("../cur/pointer.png"), default;
+    font-size: 1.2em; /* Ingrossa il testo per una migliore leggibilità */
 }
 /* Start of Admin page css */
 input {
@@ -75,7 +76,8 @@ input {
     font-family: 'Code', sans-serif; /* Updated font-family */
     color: #00FF00;
     background-color: black;
-    padding: 5px;
+    padding: 10px; /* Aumenta il padding per facilitare la selezione su dispositivi touch */
+    font-size: 1.2em; /* Ingrossa il testo per una migliore leggibilità */
 }
 textarea:focus,
 input:focus {
@@ -96,9 +98,9 @@ input:focus {
 }
 .fbutt {
     flex-grow: 1;
-    margin: 3px;
-    width: 50px;
-    height: 50px;
+    margin: 5px; /* Aumenta il margine per facilitare la selezione su dispositivi touch */
+    width: 70px; /* Aumenta le dimensioni del pulsante */
+    height: 70px; /* Aumenta le dimensioni del pulsante */
     background-color: #00FF00;
     color: black;
     border: outset 7px #00FF00;
@@ -256,7 +258,7 @@ h1 {
     border-width: 5px;
     margin-top: 1%;
     margin-bottom: 0%;
-    padding: 10px;
+    padding: 20px; /* Aumenta il padding per una migliore leggibilità */
     border-color: #00FF00;
 }
 
@@ -271,18 +273,21 @@ h1 {
     border-color: #00FF00;
     padding-left: 2%;
     padding-right: 2%;
+    font-size: 1.2em; /* Ingrossa il testo per una migliore leggibilità */
 }
 
 #linkcontainer {
     margin: 0px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px; /* Aumenta il margine per separare i link */
+    margin-bottom: 20px; /* Aumenta il margine per separare i link */
     background-color: black;
     border-style: inset;
     border-color: #00FF00;
     border-width: 5px;
-    padding: 2px;
+    padding: 5px;
     display: flex;
+    flex-wrap: wrap; /* Consente ai link di avvolgersi su dispositivi mobili */
+    justify-content: space-around; /* Centra i link su dispositivi mobili */
 }
 .linkrow {
     text-decoration: none;
@@ -297,11 +302,11 @@ h1 {
     border-style: solid;
     border-color: #00FF00;
     overflow: hidden;
-    padding: 2px;
-    margin: 1px;
-    min-width: 10px;
-    flex: 1 1;
+    padding: 5px; /* Aumenta il padding per una migliore selezione su dispositivi touch */
+    margin: 5px; /* Aumenta il margine per una migliore separazione su dispositivi mobili */
+    min-width: 100px; /* Aumenta la larghezza minima del link */
     align-items: center;
+    flex: 1 1;
     -moz-transition: all 1s linear;
     -ms-transition: all 1s linear;
     -o-transition: all 1s linear;
@@ -312,7 +317,7 @@ h1 {
     border-color: #00FF00;
     background-color: black;
     color: #00FF00;
-    cursor: url("../cur/pointer2.png"), default;
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
 }
 .layerlink0 {
     font-family: 'Code', sans-serif; /* Updated font-family */
@@ -323,11 +328,11 @@ h1 {
     border-style: solid;
     border-color: black;
     overflow: hidden;
-    padding: 2px;
-    margin: 1px;
-    min-width: 10px;
-    flex: 1 1;
+    padding: 5px; /* Aumenta il padding per una migliore selezione su dispositivi touch */
+    margin: 5px; /* Aumenta il margine per una migliore separazione su dispositivi mobili */
+    min-width: 100px; /* Aumenta la larghezza minima del link */
     align-items: center;
+    flex: 1 1;
     -moz-transition: all 1s linear;
     -ms-transition: all 1s linear;
     -o-transition: all 1s linear;
@@ -338,7 +343,7 @@ h1 {
     border-color: black;
     background-color: black;
     color: #00FF00;
-    cursor: url("../cur/pointer2.png"), pointer;
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
 }
 .prvw {
     font-family: 'Code', sans-serif; /* Updated font-family */
@@ -349,11 +354,9 @@ h1 {
     border-style: solid;
     border-color: #00FF00;
     overflow: hidden;
-    width: 7em;
-    margin: 1px;
-    padding: 2px;
-    min-width: 10px;
-    display: flex;
+    padding: 5px; /* Aumenta il padding per una migliore selezione su dispositivi touch */
+    margin: 5px; /* Aumenta il margine per una migliore separazione su dispositivi mobili */
+    min-width: 100px; /* Aumenta la larghezza minima del link */
     align-items: center;
     -moz-transition: all 1s linear;
     -ms-transition: all 1s linear;
@@ -365,59 +368,18 @@ h1 {
     border-color: #00FF00;
     background-color: black;
     color: #00FF00;
-    cursor: url("../cur/pointer2.png"), pointer;
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
 }
 
 /* End of primary content css*/
-@media screen and (max-width: 1400px) {
-    .layerlink {
-        padding: 2px;
-        font-size: 0.8em;
-    }
-    .layerlink0 {
-        padding: 2px;
-        font-size: 0.8em;
-    }
-    .prvw {
-        padding: 2px;
-        font-size: 0.8em;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .layerlink {
-        padding: 2px;
-        font-size: 0.6em;
-    }
-    .layerlink0 {
-        padding: 2px;
-        font-size: 0.6em;
-    }
-    .prvw {
-        padding: 2px;
-        font-size: 0.6em;
-    }
-}
-@media screen and (max-width: 800px) {
-    .layerlink {
-        padding: 2px;
-        font-size: 0.4em;
-    }
-    .layerlink0 {
-        padding: 2px;
-        font-size: 0.4em;
-    }
-    .prvw {
-        padding: 2px;
-        font-size: 0.4em;
-    }
-} 
 
 /* Aggiunta delle regole per centrare e ridimensionare l'immagine del titolo */
 
 #title {
-    max-width: 50%; /* Ridimensiona l'immagine al massimo del 50% della larghezza del contenitore */
+    max-width: 80%; /* Ridimensiona l'immagine al massimo del 80% della larghezza del contenitore */
     display: block; /* Permette di centrare l'immagine */
     margin: auto; /* Centra l'immagine orizzontalmente */
-    margin-top: 5px; /* Aggiunge uno spazio di 50px sopra l'immagine */
-    margin-bottom: 2px; /* Aggiunge uno spazio di 20px sotto l'immagine */
+    margin-top: 10px; /* Aumenta lo spazio sopra l'immagine */
+    margin-bottom: 20px; /* Aumenta lo spazio sotto l'immagine */
 }
+/*muro*/
