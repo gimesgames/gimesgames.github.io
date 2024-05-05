@@ -1,17 +1,8 @@
 /* BEGINNING OF FONT INCLUSION */
-
 @font-face {
-    font-family: 'Code';
-    /*a name to be used later*/
-    src: local('code'), /*URL to font*/
-    url('../fonts/Code.ttf#font') format('truetype');
-}
-
-@font-face {
-    font-family: 'code';
-    /*a name to be used later*/
-    src: local('code'), /*URL to font*/
-    url('../fonts/Code.ttf#font') format('truetype');
+    font-family: 'Digital'; /*a name to be used later*/
+    src: local('DS-DIGII'),  /*URL to font*/
+        url('../fonts/DS-DIGII.TTF') format('truetype');
 }
 
 @font-face {
@@ -72,16 +63,16 @@ body {
 }
 /* Start of Admin page css */
 input {
-    border: solid 1px #00FF00;
+    border: solid 1px #008252;
     font-family: 'Code', sans-serif; /* Updated font-family */
-    color: #00FF00;
+    color: #008252;
     background-color: black;
     padding: 10px; /* Aumenta il padding per facilitare la selezione su dispositivi touch */
     font-size: 1.2em; /* Ingrossa il testo per una migliore leggibilità */
 }
 textarea:focus,
 input:focus {
-    box-shadow: 0px 0px 50px 10px #00FF00;
+    box-shadow: 0px 0px 50px 10px #008252;
 }
 .numpad {
     display: flex;
@@ -101,9 +92,9 @@ input:focus {
     margin: 5px; /* Aumenta il margine per facilitare la selezione su dispositivi touch */
     width: 70px; /* Aumenta le dimensioni del pulsante */
     height: 70px; /* Aumenta le dimensioni del pulsante */
-    background-color: #00FF00;
+    background-color: #008252;
     color: black;
-    border: outset 7px #00FF00;
+    border: outset 7px #008252;
 }
 .fbutt:active {
     border-style: inset;
@@ -151,10 +142,10 @@ a {
     height: 100%;
     width: 100%;
     text-decoration: none;
-    color: red;
+    color: rgba(247, 6, 194, 0.3);
     border-style: outset;
     border-width: 5px;
-    border-color: red;
+    border-color: #b60fdf;
     padding: 5px;
     text-align: center;
     background-color: black;
@@ -165,7 +156,7 @@ a {
 }
 @-webkit-keyframes blink {
     0% {
-        background-color: red;
+        background-color: #b60fdf;
     }
     100% {
         background-color: black;
@@ -173,7 +164,7 @@ a {
 }
 @-moz-keyframes blink {
     0% {
-        background-color: red;
+        background-color: #b60fdf;
     }
     100% {
         background-color: black;
@@ -219,16 +210,20 @@ a {
     top: 0px;
 }
 .tab-content {
-    position: relative;
-    height: 100%;
-    background-color: #4B4B4B;
-    border-style: outset;
-    border-width: 5px;
-    margin: 0px;
-    padding-left: 2%;
-    padding-right: 2%;
-    border-color: #7C7C7C;
-}
+    height:100%;
+    background-color:#008252;
+    border-style:outset;
+    border-width:5px;
+    margin:0%;
+    padding-left:2%;
+    padding-right:2%;
+    padding-bottom:1%;
+    border-color:#00A367;
+    -moz-box-shadow:    0px 0px 50px 10px #00A367;
+    -webkit-box-shadow: 0px 0px 50px 10px #00A367;
+    box-shadow:         0px 0px 50px 10px #00A367;}
+
+
 /* TAB STYLING END */
 
 /* Start of primary content css*/
@@ -237,7 +232,7 @@ a {
     font-family: 'Code', sans-serif; /* Updated font-family */
     display: inline;
     line-height: 30px;
-    color: #00FF00;
+    color: #008252;
     margin-left: 0px;
 }
 #glider {
@@ -252,29 +247,36 @@ a {
 h1 {
     font-family: 'Code', sans-serif; /* Updated font-family */
     text-align: center;
-    color: #00FF00;
+    color: #008252;
     background-color: black;
     border-style: inset;
     border-width: 5px;
     margin-top: 1%;
     margin-bottom: 0%;
     padding: 20px; /* Aumenta il padding per una migliore leggibilità */
-    border-color: #00FF00;
+    border-color: #008252;
 }
 
 
 .main {
+    height:100%;
     background-color: black;
-    color: #00FF00;
+    border-style:outset;
+    color: #b60fdf;
     border-style: inset;
     border-width: 5px;
     margin-top: 0%;
     margin-bottom: 1%;
-    border-color: #00FF00;
+    border-color:#00A367;
     padding-left: 2%;
     padding-right: 2%;
-    font-size: 1.2em; /* Ingrossa il testo per una migliore leggibilità */
+    font-size: 1.2em;
+    -moz-box-shadow:    0px 0px 50px 10px #00A367; 
+    -webkit-box-shadow: 0px 0px 50px 10px #00A367;
+    box-shadow:         0px 0px 50px 10px #00A367;/* Ingrossa il testo per una migliore leggibilità */
 }
+
+
 
 #linkcontainer {
     margin: 0px;
@@ -282,7 +284,7 @@ h1 {
     margin-bottom: 20px; /* Aumenta il margine per separare i link */
     background-color: black;
     border-style: inset;
-    border-color: #00FF00;
+    border-color: #008252;
     border-width: 5px;
     padding: 5px;
     display: flex;
@@ -297,10 +299,10 @@ h1 {
     font-family: 'Code', sans-serif; /* Updated font-family */
     text-decoration: none;
     color: black;
-    background-color: #00FF00;
+    background-color: #008252;
     text-align: center;
     border-style: solid;
-    border-color: #00FF00;
+    border-color: #008252;
     overflow: hidden;
     padding: 5px; /* Aumenta il padding per una migliore selezione su dispositivi touch */
     margin: 5px; /* Aumenta il margine per una migliore separazione su dispositivi mobili */
@@ -314,15 +316,15 @@ h1 {
 }
 .layerlink:hover {
     border-style: solid;
-    border-color: #00FF00;
+    border-color: #008252;
     background-color: black;
-    color: #00FF00;
+    color: #008252;
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
 }
 .layerlink0 {
     font-family: 'Code', sans-serif; /* Updated font-family */
     text-decoration: none;
-    color: #00FF00;
+    color: #008252;
     background-color: black;
     text-align: center;
     border-style: solid;
@@ -342,34 +344,33 @@ h1 {
     border-style: solid;
     border-color: black;
     background-color: black;
-    color: #00FF00;
+    color: #008252;
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
 }
-.prvw {
-    font-family: 'Code', sans-serif; /* Updated font-family */
-    text-decoration: none;
-    color: black;
-    background-color: #00FF00;
-    text-align: center;
-    border-style: solid;
-    border-color: #00FF00;
-    overflow: hidden;
-    padding: 5px; /* Aumenta il padding per una migliore selezione su dispositivi touch */
-    margin: 5px; /* Aumenta il margine per una migliore separazione su dispositivi mobili */
-    min-width: 100px; /* Aumenta la larghezza minima del link */
+.prvw{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:#B60FDF;
+    text-shadow: 1px 1px black;
+    background-color:#00A367;
+    text-align:center;
+    border-style:solid;
+    border-color:#00CC81;
+    width:7em;
+    margin:1px;
+    padding:2px;
+    min-width:10px;
+    display: flex;
     align-items: center;
-    -moz-transition: all 1s linear;
-    -ms-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
-}
-.prvw:hover {
-    border-style: solid;
-    border-color: #00FF00;
-    background-color: black;
-    color: #00FF00;
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-}
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;}
+.prvw:hover {border-style:solid; border-color:#00A367; background-color:black; text-decoration:none;  cursor:url("../cur/Lain_Link.png"), pointer;
+   -moz-box-shadow:    inset 0 0 50px #00A367;
+   -webkit-box-shadow: inset 0 0 50px #00A367;
+   box-shadow:         inset 0 0 50px #00A367;}
 
 /* End of primary content css*/
 
