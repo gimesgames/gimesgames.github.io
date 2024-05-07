@@ -384,3 +384,99 @@ h1 {
     margin-bottom: 20px; /* Aumenta lo spazio sotto l'immagine */
 }
 /*muro*/
+#topicselection{
+    white-space:nowrap;
+    display:block;
+    background-color:#000099;
+    border-style:inset;
+    border-width:10px;
+    padding:5px;
+    border-color:#000099;
+    color:black;   
+    font-family:LoveLetter;
+    text-align:left;}
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Asap", sans-serif;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+  background: black;
+  color: white;
+}
+
+:root {
+  --edge: 75%;
+}
+@property --edge {
+  syntax: "<percentage>";
+  initial-value: 100%;
+  inherits: false;
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    circle closest-side,
+    hotpink,
+    deeppink 50%,
+    transparent var(--edge),
+    transparent 100%
+  );
+  filter: url(#noise);
+  /*
+  animation: anim 3s linear infinite alternate;
+  */
+}
+@keyframes anim {
+  0% {
+    --edge: 100%;
+  }
+  100% {
+    --edge: 50%;
+  }
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+main {
+  position: relative;
+}
+section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  font-size: 1.2rem;
+}
